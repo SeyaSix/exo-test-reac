@@ -1,23 +1,35 @@
 function Header() {
+  const userLogged = {
+    lastname: "Mo",
+    firstname: "Mathias",
+    job: "dev",
+  };
 
   const isUserLogged = true;
 
   const itemCart = 0;
 
-    return (
-      <header>
-        <h1>Super ecommerce</h1>
-        <nav>
-          <ul>
-            {isUserLogged ? <li>nom d'utilisateur</li> : <li>connectez vous</li>}
-            <li>Home</li>
-            <li>Products</li>
-            {itemCart > 0 ? <li>Cart : {itemCart}</li> : <li>pas d'item dans le Panier</li>}
+  return (
+    <header>
+      <h1>Super ecommerce</h1>
+      <nav>
+        <ul>
+          {isUserLogged ? (
+            <li>
+              {userLogged.firstname} {userLogged.lastname} - {userLogged.job}
+            </li>
+          ) : (
+            <li>Veuillez vous connecter</li>
+          )}
 
-          </ul>
-        </nav>
-      </header>
-    );
-  }
-  
-  export default Header;
+          <li>Home</li>
+          <li>Products</li>
+
+          {itemCart > 0 ? <li>Cart : {itemCart}</li> : <li>Pas d'item au panier</li>}
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+export default Header;
