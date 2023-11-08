@@ -16,7 +16,7 @@ function Products() {
   return (
     <main>
       <article>
-        <div class="product-item">
+        <div className="product-item">
           <h2>Achetez cette magnifique paire de mocassins à glands</h2>
           <button onClick={() => ajouterAuPanier("mocassins à glands")}>
             300€
@@ -25,7 +25,7 @@ function Products() {
       </article>
 
       <article>
-        <div class="product-item">
+        <div className="product-item">
           <h2>Turbo mixeur 3000</h2>
           <button onClick={() => ajouterAuPanier("Turbo mixeur 3000")}>
             200€
@@ -34,7 +34,7 @@ function Products() {
       </article>
 
       <article>
-        <div class="product-item">
+        <div className="product-item">
           <h2>Aspire-tout</h2>
 
           <button onClick={() => ajouterAuPanier("Aspire-tout")}>350€</button>
