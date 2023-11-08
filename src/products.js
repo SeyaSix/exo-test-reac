@@ -13,8 +13,25 @@ function Products() {
     setShowPopup(false);
   };
 
+  const productFromDb = [
+    "Mocassins", "Charentaise", "Talon"
+  ];
+
   return (
+
+
+
     <main>
+      <div>
+      {productFromDb.map((product)=>{
+        return (
+        <article>
+          <h2>{product}</h2>
+        </article>
+      );
+      })}
+      </div>
+
       <article>
         <div className="product-item">
           <h2>Achetez cette magnifique paire de mocassins à glands</h2>
