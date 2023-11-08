@@ -1,22 +1,35 @@
 function Products() {
-    return (
-      <main>
-        <article>
-          <h2>Achetez cette magnifique paire de mocassins à glands</h2>
-          <p>300e</p>
-        </article>
-  
-        <article>
-          <h2>Turbo mixeur 3000</h2>
-          <p>200e</p>
-        </article>
-  
-        <article>
-          <h2>Aspire-tout</h2>
-          <p>350e</p>
-        </article>
-      </main>
-    );
-  }
-  
-  export default Products;
+  const ajoutAuPanier = (productName) => {
+    console.log(`Ajouté au panier : ${productName}`);
+  };
+  return (
+    <main>
+      <article>
+      <div className="product-item">
+        <h2>Achetez cette magnifique paire de mocassins à glands</h2>
+        <button onClick={() => ajoutAuPanier("mocassins à glands")}>
+          300€
+        </button>
+        </div>
+      </article>
+
+      <article>
+        <div className="product-item">
+        <h2>Turbo mixeur 3000</h2>
+        <button onClick={() => ajoutAuPanier("Turbo mixeur 3000")}>200€</button>
+        </div>
+      </article>
+
+      <article>
+        <div className="product-item">
+        <h2>Aspire-tout</h2>
+
+        <button onClick={() => ajoutAuPanier("Aspire-tout")}>350€</button>
+        </div>
+      </article>
+      
+    </main>
+  );
+}
+
+export default Products;
