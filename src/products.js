@@ -1,6 +1,16 @@
+import React, { useState } from 'react';
+
 function Products() {
-  const ajoutAuPanier = (productName) => {
-    console.log(`Ajouté au panier : ${productName}`);
+  const [showPopup, setShowPopup] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState('');
+
+  const ajouterAuPanier = (productName) => {
+    setSelectedProduct(productName);
+    setShowPopup(true);
+  };
+
+  const closePopup = () => {
+    setShowPopup(false);
   };
 
   return (
@@ -8,7 +18,7 @@ function Products() {
       <article>
         <div class="product-item">
           <h2>Achetez cette magnifique paire de mocassins à glands</h2>
-          <button onClick={() => ajoutAuPanier("mocassins à glands")}>
+          <button onClick={() => ajouterAuPanier("mocassins à glands")}>
             300€
           </button>
         </div>
@@ -17,7 +27,7 @@ function Products() {
       <article>
         <div class="product-item">
           <h2>Turbo mixeur 3000</h2>
-          <button onClick={() => ajoutAuPanier("Turbo mixeur 3000")}>
+          <button onClick={() => ajouterAuPanier("Turbo mixeur 3000")}>
             200€
           </button>
         </div>
@@ -27,9 +37,17 @@ function Products() {
         <div class="product-item">
           <h2>Aspire-tout</h2>
 
-          <button onClick={() => ajoutAuPanier("Aspire-tout")}>350€</button>
+          <button onClick={() => ajouterAuPanier("Aspire-tout")}>350€</button>
         </div>
       </article>
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <h2>Ajouté au panier : {selectedProduct}</h2>
+            <button onClick={closePopup}>Fermer</button>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
