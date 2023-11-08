@@ -2,22 +2,22 @@ function Products() {
   const productsFromDb = [
     {
       title: "scotch ",
-      price: 12,
+      prix: 12,
       isPublished: true,
     },
     {
       title: "Aspirateur",
-      price: 299,
+      prix: 299,
       isPublished: true,
     },
     {
       title: "Contre Plaqué",
-      price: 120,
+      prix: 120,
       isPublished: true,
     },
     {
       title: "Sangles",
-      price: 25,
+      prix: 25,
       isPublished: true,
     },
   ];
@@ -28,7 +28,7 @@ function Products() {
         return (
           <article>
             <h2>{product.title}</h2>
-            <p>{product.price} €</p>
+            <p>{product.prix} €</p>
           </article>
         );
       })}
