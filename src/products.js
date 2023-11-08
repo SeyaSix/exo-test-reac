@@ -22,7 +22,7 @@ function Products() {
 
 
     <main>
-      <div>
+      <>
       {productFromDb.map((product)=>{
         return (
         <article>
@@ -30,7 +30,7 @@ function Products() {
         </article>
       );
       })}
-      </div>
+      </>
 
       <article>
         <div className="product-item">
