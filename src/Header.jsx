@@ -1,4 +1,5 @@
 import ProfileMenu from "./ProfileMenu";
+import { Link } from "react-router-dom";
 import './App.css';
 function Header() {
   return (
@@ -8,9 +9,8 @@ function Header() {
         <div className="nav-header">
         <p>Navigation</p>
           <ul className="nav-list">
-            <li>Home</li>
-            <li>Articles</li>
-            <li>Contact</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/Contact">Contact</Link></li>
             <ProfileMenu />
           </ul>
         </div>
@@ -18,5 +18,4 @@ function Header() {
     </header>
   );
 }
-
 export default Header;

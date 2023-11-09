@@ -1,4 +1,7 @@
-function Homes() {
+import Header from "./Header";
+import Footer from "./Footer";
+
+function Home() {
   const articles = [
     {
       title: "Article 1",
@@ -68,18 +71,22 @@ function Homes() {
   const lastThreePublishedArticles = publishedArticles.slice(-3);
 
   return (
-    <main>
-      <h2>Les trois derniers articles : </h2>
-      {lastThreePublishedArticles.map((article) => {
-        return (
-          <article>
-            <h2>{article.title}</h2>
-            <h3>{article.price}e</h3>
-          </article>
-        );
-      })}
-    </main>
+    <>
+      <Header />
+      <main>
+        <h2>Les trois derniers articles : </h2>
+        {lastThreePublishedArticles.map((article) => {
+          return (
+            <article>
+              <h2>{article.title}</h2>
+              <h3>{article.price}e</h3>
+            </article>
+          );
+        })}
+      </main>
+      <Footer />
+    </>
   );
 }
 
-export default Homes;
+export default Home;
