@@ -1,7 +1,7 @@
 function Footer() {
     return (
       <footer>
-        <p>Super footer de ecommerce</p>
+        <p>oui c'est un Footer</p>
       </footer>
     );
   }
