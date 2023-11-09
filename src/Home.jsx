@@ -1,4 +1,4 @@
-function Home() {
+function Homes() {
   const articles = [
     {
       title: "Article 1",
@@ -74,7 +74,7 @@ function Home() {
         return (
           <article>
             <h2>{article.title}</h2>
-            <h3>{article.price}€</h3>
+            <h3>{article.price}e</h3>
           </article>
         );
       })}
@@ -82,4 +82,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Homes;
