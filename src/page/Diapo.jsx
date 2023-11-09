@@ -24,7 +24,7 @@ function Diapo() {
         <Header />
         <div className="diapo-c">
         <button className="diapo-button" onClick={prevImage}>Précédent</button>
-        <img className="diapo-image" src={images[currentImage]} alt={`Image ${currentImage + 1}`} />
+        <img className="diapo-image" src={images[currentImage]} alt={`Image ${currentImage + 1}`}/>
         <button className="diapo-button" onClick={nextImage}>Suivant</button>
         </div>
         <Footer />
