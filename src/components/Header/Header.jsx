@@ -1,6 +1,6 @@
-import ProfileMenu from "./ProfileMenu";
+
 import { Link } from "react-router-dom";
-import './App.css';
+
 function Header() {
   return (
     <header className="h-container">
@@ -12,7 +12,6 @@ function Header() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/Contact">Contact</Link></li>
             <li> <Link to="/diapo">Galerie</Link> </li>
-            <ProfileMenu />
           </ul>
         </div>
       </nav>
