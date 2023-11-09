@@ -45,6 +45,19 @@
   text-align: center;
   margin-top: 15%;
 }
+.diapo-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.diapo-image {
+  max-width: 50%;  
+  max-height: 50%; 
+}
+.diapo-button {
+  margin-top: 10px;
+}
 
 main {
   text-align: center;

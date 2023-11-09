@@ -11,7 +11,8 @@ function Header() {
           <ul className="nav-list">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/Contact">Contact</Link></li>
-            <li> <Link to="/diapo">Galerie</Link> </li>
+            <li> <Link to="/diapo">Galerie</Link></li>
+            <li> <Link to="/articles">Articles</Link></li>
           </ul>
         </div>
       </nav>
