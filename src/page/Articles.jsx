@@ -64,6 +64,13 @@ function Articles(){
         },
     ];
 
+    const getRandomColorClass = () => {
+        const colors = ['green', 'orange', 'blue'];
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        return `color-${randomColor}`;
+      };
+
+    
     const articleafficher = articles.slice(0, articles.length - 3);
 
     return (
@@ -71,7 +78,7 @@ function Articles(){
         <Header />
         <main>
             {articleafficher.map((article) => (
-            <article key={article.title}>
+            <article key={article.title} className={getRandomColorClass()}>
                 <h2>{article.title}</h2>
                 <p>{article.price} euros</p>
             </article>

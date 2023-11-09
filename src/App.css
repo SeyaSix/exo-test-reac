@@ -59,6 +59,17 @@
   margin-top: 10px;
 }
 
+.color-green {
+  color: green;
+}
+
+.color-orange {
+  color: orange;
+}
+
+.color-blue {
+  color: blue;
+}
 main {
   text-align: center;
   position: absolute;
